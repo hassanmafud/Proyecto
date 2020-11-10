@@ -44,5 +44,10 @@ namespace Proyecto.Formularios
         {
 
         }
+
+        private void seleccionestados_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.estadosDisponibles = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.estadosDisponibles = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadosSeleccionados = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -55,6 +55,15 @@
             this.dataGridView2.Size = new System.Drawing.Size(270, 187);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // estadosDisponibles
+            // 
+            this.estadosDisponibles.Frozen = true;
+            this.estadosDisponibles.HeaderText = "ESTADOS DISPONIBLES";
+            this.estadosDisponibles.Name = "estadosDisponibles";
+            this.estadosDisponibles.ReadOnly = true;
+            this.estadosDisponibles.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.estadosDisponibles.Width = 200;
             // 
             // button1
             // 
@@ -108,15 +117,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(270, 187);
             this.dataGridView1.TabIndex = 6;
             // 
-            // estadosDisponibles
-            // 
-            this.estadosDisponibles.Frozen = true;
-            this.estadosDisponibles.HeaderText = "ESTADOS DISPONIBLES";
-            this.estadosDisponibles.Name = "estadosDisponibles";
-            this.estadosDisponibles.ReadOnly = true;
-            this.estadosDisponibles.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.estadosDisponibles.Width = 200;
-            // 
             // estadosSeleccionados
             // 
             this.estadosSeleccionados.Frozen = true;
@@ -143,6 +143,7 @@
             this.Controls.Add(this.dataGridView2);
             this.Name = "seleccionestados";
             this.Text = "seleccionestados";
+            this.Load += new System.EventHandler(this.seleccionestados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

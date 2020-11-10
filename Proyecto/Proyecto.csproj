@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\Class1.cs" />
     <Compile Include="Formularios\seleccionestados.cs">
       <SubType>Form</SubType>
     </Compile>
